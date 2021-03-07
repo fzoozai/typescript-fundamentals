@@ -61,3 +61,19 @@ const outputInput = <T>(input: T): T => {
   console.log(input);
   return input;
 };
+
+// Duck typing
+
+class CryptoWiz implements CryptoCurrency {
+  name: string;
+  abbreviation?: string;
+  price: number;
+}
+
+const dummy = {
+  name: "BNB",
+  price: 250,
+};
+
+let currency: CryptoCurrency = new CryptoWiz();
+currency = dummy;
