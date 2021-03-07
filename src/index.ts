@@ -54,3 +54,10 @@ class Currency {
 
 const binance = new Currency(241);
 binance.printValue();
+
+// Generics
+
+const outputInput = <T>(input: T): T => {
+  console.log(input);
+  return input;
+};
