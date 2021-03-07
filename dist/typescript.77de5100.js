@@ -160,7 +160,25 @@ var CarType;
 var createCarType = function createCarType(carType) {};
 
 createCarType(CarType.ELECTRIC);
-console.log(CarType.ELECTRIC);
+console.log(CarType.ELECTRIC); // Classes
+
+var Currency =
+/** @class */
+function () {
+  function Currency(price) {
+    this.price = price;
+  }
+
+  Currency.prototype.printValue = function () {
+    console.log(this.price);
+    return this.price;
+  };
+
+  return Currency;
+}();
+
+var binance = new Currency(241);
+binance.printValue();
 },{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

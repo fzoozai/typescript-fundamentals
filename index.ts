@@ -36,3 +36,21 @@ enum CarType {
 const createCarType = (carType: CarType) => {};
 createCarType(CarType.ELECTRIC);
 console.log(CarType.ELECTRIC);
+
+// Classes
+
+class Currency {
+  price: number;
+
+  constructor(price) {
+    this.price = price;
+  }
+
+  printValue(): number {
+    console.log(this.price);
+    return this.price;
+  }
+}
+
+const binance = new Currency(241);
+binance.printValue();
